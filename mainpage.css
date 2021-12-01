@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #283747;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.line1,
+.line2 {
+  width: 38%;
+  height: 13px;
+  background-color: white;
+  display: inline-block;
+}
+
+.line2 {
+  position: relative;
+  right: 0;
+  bottom: 0;
+}
+
+.line {
+  margin-top: 10%;
+  width: 80%;
+}
+
+.cam {
+  width: 100%;
+}
+
+.camera {
+  display: inline-block;
+  width: 19%;
+  align-items: center;
+  margin: 2%;
+}
+
+.autname > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  font-size: 100px;
+}
+
+.line3 {
+  background-color: white;
+  height: 13px;
+}

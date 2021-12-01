@@ -1,0 +1,563 @@
+<!--      
+
+*  let age = '30';
+
+*   Number.isInteger(age) = numero inteiro?
+
+*    let user = {
+        firstname:'jim',
+        lastname:'Helpert',
+        workplace:'Dunber mifflin',
+        age:34,
+                }
+
+*   for (let letter of word)
+
+*   let price = null;
+
+*  let resultat = Math.pow(base,exposant); = resultado entre 2 numeros
+
+* console.log(a + parseInt(b,10)); = convercao b em numeros
+   
+* parseFloat(productsTotalValue)
+
+*console.log(sentence.length);
+
+*console.log(`${var}`);
+
+*l\'utilisatrice
+
+*userName.toLowerCase()/hello.toUpperCase
+
+Les méthodes trimStart(), trimEnd() et trim() permettent de retirer les espaces blancs respectivement au début, à la fin ou les deux, dans une chaîne de caractères.
+
+La méthode substring() permet de récupérer une partie d'une chaîne, en précisant un caractère de début et éventuellement un caractère de fin.
+
+slice() : pour extraire une section d'une chaîne.
+
+----------------------------------
+const car = {
+    type: 'BMW',
+    color:'blue',
+    doors: 3,
+    airConditioner: true
+  };
+  
+  const {color, type, doors, airConditioner} = car
+  
+  const ojectIsValid = color && type && doors && airConditioner;
+    
+  --------------------------------
+        let isVIP = false;
+        let message = "";
+
+        isVIP ? message = "Merci de faire partie de nos clients VIP!" : message = "poursuivez-nos abonnement por obtenir le status VIP";
+
+        console.log(message);
+-----------------------------------------
+
+                switch (chaineTV) {
+                case 1:
+                console.log("Vous avez choisi la chaine 1.");
+                break;
+
+------------------------
+
+for (number=1;number <= 10;number++){
+    if (number % 2 === 0) {
+        console.log('Numero ' + number + ' est par');
+    } else {
+        console.log('Numero ' + number + ' est impar');
+    }
+}
+-------------------------------------------
+
+const animals = ['chien','chat','renard','poisoon'];
+
+for (let i = 0; i < animals.length;i++){
+    console.log(animals[i]);
+}
+
+
+for (let animal of animals){
+    console.log(animal);
+}
+-------------------------------------------
+
+const animals = [
+
+['chien','chat','renard','poisoon'],
+['vache','Mouton','Chevre'],
+['tacos','hola','welcome']
+
+];
+
+
+let i = 0;
+
+for (const animalCategory of animals){
+    for(const animal of animalCategory){
+        console.log(animal);
+    }
+}
+
+for(let i = 0;i <animals.length;i++){
+    for (let j = 0;j<animals[i].length;j++){
+        console.log(animals[i][j]);
+    }
+}
+
+while (i< animals.length) {
+    let j = 0;
+    while (j < animals[i].length){
+        console.log(animals[i][j]);
+        j++;
+    }
+    i++;
+}
+------------------------------------------------------
+
+const height = 10;
+const width = 50;
+const depth = 1;
+
+const volume = volumeParallelepipede(height, width, depth);
+
+
+function volumeParallelepipede (height, width, depth) {
+  console.log(height * width * depth);
+}
+
+------------------------------------
+
+console.log(Math.floor(6.1)); = 6
+console.log(Math.ceil(6.1)); = 7
+console.log(Math.round(6.1)); = 6/7
+
+---------------------------------
+
+function transformText(word) {
+  const firstLetter = word.substring(0, 1).toUpperCase() // Récupere la premiere lettre et la transforme en majuscule
+  const otherLetters = word.substring(1).toLowerCase() // Récupere les autres lettres et les transforme en minuscule
+  return `${firstLetter}${otherLetters}` // Concatenation des deux variables
+}
+
+const newWord =  transformText('MAGIQUE');
+console.log(newWord);
+
+-----------------------------------------
+
+let str = 'jOnnY'
+let firstLetter = str.charAt(0).toUpperCase()
+let restLetter = str.slice(1).toLowerCase()
+
+console.log(firstLetter + restLetter); 
+
+--------------------------------------------
+
+function getNote(counter, notes, higher, lower) {
+    if (!higher && !lower)
+     {
+      higher = notes[counter];
+      lower = notes[counter];
+      counter++;
+    }
+
+    if (counter < notes.length) 
+    {
+      higher = higher > notes[counter] ? higher : notes[counter];
+      lower = lower < notes[counter] ? lower : notes[counter];
+      counter++;
+      return getNote(counter, notes, higher, lower) 
+    } else {
+      return {higher, lower}
+    }
+  }
+  
+  const notes  = [10, 20, 15, 17, 8, 5,25, 12, 4];
+  
+  console.log(getNote(0, notes, null, null)) // {heigher: 25, lower: 4}
+  ----------------------------------------------------------------------------
+
+        const coworkerAges = [25,30,33,20,54,21,65];
+
+        const sortedAges = coworkerAges.sort(function(a, b){
+        return a - b;
+        });
+
+        console.log(sortedAges);
+
+        const displayAges = sortedAges.map(sortedAge => `${sortedAge} ans`);
+
+        console.log(displayAges);
+
+----------------------------------------------------------------------------------
+(() => {
+  const hello = 'Hello world';
+  console.log(hello);
+})()
+
+--------------------------------------------------------
+let average = 0
+// boucle sur le tableau des étudiant de la classe
+const notesNicolas = regions[0].departement[0].lycees[0].classes[0].students[4].scores ;
+for (let i = 0 ; i < notesNicolas.length ; i++) {
+   average += Math.round((notesNicolas[i].note / notesNicolas.length) * 10) / 10;
+}
+
+console.log(average)
+-------------------------------------------------------
+
+const objet = prompt('Entrez le motif de la convocation')
+const lastName = prompt('Entrez un nom')
+const firstName = prompt('Entrez un prénom')
+const gender = prompt('M ou Mme')
+const dateAppointement = prompt('Entrez une date de convocation (dd/mm/yyyy)');
+const place = prompt('Entrez un numéro de bureau')
+const signature = 'Votre agent administratif';
+    
+let body = `
+À ${lastName.toUpperCase()} ${firstName.toUpperCase()}
+  
+        Objet de la convocation: ${objet}
+    
+        ${gender} ${lastName.toUpperCase()} ${firstName.toUpperCase()}, vous êtes convoqué le ${dateAppointement} dans le bureau ${place} dont pour le motif suivant: ${objet}.
+    
+En vous remerciant.
+    
+${signature}
+
+`;
+    
+console.log(body);
+
+-----------------------------------------------
+
+// On ajoute à chaque objet une méthode qui retournera l'alerte
+const workers = [
+  {name: 'Benjamin', age: 25, nbHour: 35, alert: function () {return `employé: ${this.name}, heures: ${this.nbHour}`}},
+  {name: 'Luc', age: 45, nbHour: 36, alert: function () {return `employé: ${this.name}, heures: ${this.nbHour}`}},
+  {name: 'Marie', age: 23, nbHour: 35, alert: function () {return `employé: ${this.name}, heures: ${this.nbHour}`}},
+  {name: 'Jeanne', age: 36, nbHour: 30, alert: function () {return `employé: ${this.name}, heures: ${this.nbHour}`}},
+  {name: 'Jean', age: 37, nbHour: 35, alert: function () {return `employé: ${this.name}, heures: ${this.nbHour}`}}
+];
+
+let alerte = '';
+
+const workerHasNotHour = [];
+
+for (let i = 0; i < workers.length; i++) {
+  if (workers[i].nbHour !== 35) {
+    // On ajoute le message d'alerte à la variable alerte
+    alerte += `${workers[i].alert()} \n`;
+    // On ajoute dans le tableau l'employé qui n'a pas fait ses 35h
+    workerHasNotHour.push(workers[i]);
+  }
+}
+
+alert(alerte);
+
+------------------------------------------
+
+const ages = [14,27,65,18,94,6];
+let majority = true;
+
+ages.forEach(age => {
+  if(age<18){
+    majority=false
+  }
+})
+
+console.log(majority);
+
+console.log('---------------------')
+
+console.log(ages.every(age => age > 18));
+
+console.log('---------------------')
+
+console.log(ages.some(ages => ages < 18));
+
+console.log('---------------------')
+
+-------------------------------------------------------
+
+let movies = [
+  {
+    title:'King kong',
+    year:'1933',
+    rating:98
+  },
+  {
+    title:'Citizen Kane',
+    year:'1941',
+    rating:100
+  },
+  {
+    title:'Modern Times',
+    year:'1936',
+    rating:100
+  },
+  {
+    title:'The wizard of Oz',
+    year:'1939',
+    rating:98
+  },
+];
+
+const movieTitles = movies.map(movie => {
+  return movie.title + ' ' + movie.year;
+ 
+});
+
+console.log(movieTitles);
+
+------------------------------------
+
+let cart = [
+  {
+    designation:'Pomme',
+    unitPrice:0.85,
+    units:6
+  },
+  {
+    designation:'Chou-fleur',
+    unitPrice:0.97,
+    units:2
+  },
+  {
+    designation:'Orange',
+    unitPrice:1.15,
+    units:4
+  }
+];
+
+console.log(
+  cart.reduce((accumulator,currentValue) => accumulator+currentValue.unitPrice * currentValue.units,0)
+);
+
+--------------------------------------
+
+let productStocks = [15, 184, 29, 0, 35]
+
+console.log(productStocks.every(function(element) {
+  return element > 0
+}))
+
+--------------------
+const numbers = [4, 8, 14, 2];
+
+console.table(numbers);
+console.count(numbers);
+
+numbers.forEach(numbers => {
+    console.log('numbers');
+})
+
+console.assert(numbers.length === 3, 'Trop de numbers');
+
+let number = 0;
+
+console.time('boucle');
+
+for (let i = 0; i < 1e6;i++){
+    number++;
+
+    if(i === 1e3){
+        console.timeLog('boucle');
+    }
+}
+console.timeEnd('boucle');
+
+console.log(number);
+
+--------------------------------------------
+
+let firstName = prompt('Saisissez votre Age')
+
+alert('Vous avez dite que votre age est ' + firstName);
+
+let confirm = window.confirm('Est-ce correct?');
+
+console.log(confirm);
+
+if(confirm == true){
+    alert('Merci')
+} else {
+    alert('Recommances svp')
+}
+
+------------------------------------------------
+let datetoday = new Date();
+let datebefore = new Date(2020,11,25);
+
+
+console.log(datetoday);
+console.log(datebefore);
+
+--------------------------------------------------
+
+const date = new Date(2020, 11, 25)
+
+
+console.log(date.getTime());
+console.log(date.getMonth());
+
+date.setHours(20,30);
+
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date);
+
+---------------------------------------------
+
+let date = new Date(2020, 11, 25, 20, 30);
+
+console.log(date);
+
+let date5 = new Date(
+    date.getFullYear() + 5,
+    date.getMonth() + 6,
+    date.getDate(), 
+    date.getHours() + 12,
+    date.getMinutes());
+
+console.log(date5); 
+
+--------------------------------------------
+
+const bastilleDay = new Date(2020, 11, 25, 18, 00, 00);
+
+console.log(bastilleDay.toLocaleDateString('fr-FR'));
+
+const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
+};
+
+console.log(bastilleDay.toLocaleDateString('fr-FR', options));
+
+
+---------------------------------------------------------------------
+
+EURO MILHOES
+
+let numbers = [98, 100, 102, 500, 10, '97', 'bonjour'];
+
+console.log(numbers.filter(number => parseInt(number) <= 100));
+
+--------------------------------------------------------------------------------
+const listeNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+
+
+const winNumbers = [];
+const complementaryNumbers = []
+
+function randomInInterval(min, max){
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function addToTable(table, tableRef) {
+  const index = randomInInterval(0, tableRef.length - 1)
+  table.push(tableRef[index]);
+  tableRef.splice(index, 1);
+}
+
+function tirage(size, table, tableRef) {
+  while (table.length < size) {
+    addToTable(table, tableRef)
+  }
+}
+
+tirage(5, winNumbers, listeNumber);
+tirage(2, complementaryNumbers, listeNumber);
+
+console.log(winNumbers, complementaryNumbers);
+
+----------------------------------------------------------------------------
+
+const listTemperature = {
+  month: 'January',
+  tempPerDay : [
+    {day: 1, temp: 15},
+    {day: 2, temp: 10},
+    {day: 3, temp: 14},
+    {day: 4, temp: 20},
+    {day: 5, temp: 18},
+    {day: 6, temp: 17},
+    {day: 7, temp: 15},
+    {day: 8, temp: 16},
+    {day: 9, temp: 15},
+    {day: 10, temp: 9},
+    {day: 11, temp: 10},
+    {day: 12, temp: 13},
+    {day: 13, temp: 14},
+    {day: 14, temp: 11},
+    {day: 15, temp: 12},
+    {day: 16, temp: 16},
+    {day: 17, temp: 17},
+    {day: 18, temp: 14},
+    {day: 19, temp: 15},
+    {day: 20, temp: 11},
+    {day: 21, temp: 11},
+    {day: 22, temp: 10},
+    {day: 23, temp: 19},
+    {day: 24, temp: 22},
+    {day: 25, temp: 18},
+    {day: 26, temp: 17},
+    {day: 27, temp: 16},
+    {day: 28, temp: 13},
+    {day: 29, temp: 15},
+    {day: 30, temp: 20},
+    {day: 31, temp: 22}
+  ]
+};
+
+let tableTemp = [];
+
+for (let counter = 0; counter < listTemperature.tempPerDay.length; counter++) {
+  if (listTemperature.tempPerDay[counter].temp > 20) {
+    tableTemp.push(listTemperature.tempPerDay[counter].temp);
+  }
+}
+
+console.log(tableTemp)
+
+---------------------------------
+
+let userTemplate = { name: '', isAdmin: false }
+
+function createUser(name, isAdmin) {
+    let newUser = {}
+    Object.assign(newUser, userTemplate)
+    newUser.name = name
+    newUser.isAdmin = isAdmin
+
+    return newUser
+  
+}
+
+let adminUser = createUser('Jane', true)
+let user = createUser('John', false)
+
+console.log(user)
+console.log(adminUser)
+
+
+--------------------------
+
+
+
+
+
+
+
+
+
+
+
+ -->

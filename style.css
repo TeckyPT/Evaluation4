@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgba(5, 10, 5, 0.5);
+  width: 80%;
+}
+
+.element {
+  font-size: 100px;
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://cdn.pixabay.com/photo/2021/11/13/23/06/tree-6792528_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
