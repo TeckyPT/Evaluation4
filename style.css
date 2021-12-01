@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.element {
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+}
+
+html {
+  background-image: url("Fotos/lantern-g82736c5a3_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
