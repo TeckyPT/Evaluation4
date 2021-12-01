@@ -11,11 +11,13 @@ body {
 
 .element {
   font-size: 70px;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
 }
 
 html {
-  background-image: url("Fotos/lantern-g82736c5a3_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://cdn.pixabay.com/photo/2021/11/13/23/06/tree-6792528_960_720.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
